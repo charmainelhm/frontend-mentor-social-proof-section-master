@@ -18,6 +18,11 @@
   padding: 0;
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 /* Typography */
 html {
   font-size: 62.5%;
@@ -36,7 +41,27 @@ h1 {
 
 h2 {
   font-size: var(--fs-400);
-  font-weight: 500;
+  font-weight: 700;
+}
+
+/* Rating Block */
+.rating {
+  background: var(--color-accent-purple);
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.rating__stars {
+  margin-bottom: 0.8rem;
+}
+
+.icon-star + .icon-star {
+  margin-left: 0.5rem;
+}
+
+.rating__title {
+  color: var(--color-primary);
 }
 
 /* Attribution */
