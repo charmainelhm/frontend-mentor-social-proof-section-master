@@ -8,7 +8,7 @@
   --border-radius: 10px;
 
   --fs-xl: 3.2rem;
-  --fs-500: 1.8rem;
+  --fs-500: 1.5rem;
   --fs-400: 1.4rem;
   --fs-300: 1.35rem;
 }
@@ -35,11 +35,18 @@ body {
   font-family: "Spartan", arial, helvetica, sans-serif;
   font-size: var(--fs-300);
   color: var(--color-secondary);
+  padding: 6rem 0;
+  background-image: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  position: relative;
 }
 
 h1 {
   font-size: var(--fs-xl);
   font-weight: 700;
+  color: var(--color-primary);
 }
 
 h2 {
@@ -49,6 +56,21 @@ h2 {
 
 p {
   line-height: 1.8;
+}
+
+/* Sections */
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header__text {
+  font-size: var(--fs-500);
+  font-weight: 500;
+}
+
+.rating-block {
+  margin-bottom: 4rem;
 }
 
 /* Rating Block */
@@ -69,6 +91,10 @@ p {
 
 .rating__title {
   color: var(--color-primary);
+}
+
+.rating + .rating {
+  margin-top: 1.5rem;
 }
 
 /* Testimonial Card */
@@ -118,11 +144,26 @@ p {
   content: close-quote;
 }
 
+.testimonial-card + .testimonial-card {
+  margin-top: 1.5rem;
+}
+
 /* Attribution */
 .attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 1px;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: var(--color-accent-pink);
 }
