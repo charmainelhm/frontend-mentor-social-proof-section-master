@@ -23,6 +23,7 @@
 
 .container {
   width: 90%;
+  max-width: 1110px;
   margin: 0 auto;
 }
 
@@ -56,6 +57,13 @@ h2 {
 
 p {
   line-height: 1.8;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+  }
 }
 
 /* Sections */
@@ -166,4 +174,33 @@ p {
 .attribution a:hover,
 .attribution a:focus {
   color: var(--color-accent-pink);
+}
+
+@media screen and (min-width: 600px) {
+  .rating {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .testimonial-block {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .testimonial-card + .testimonial-card {
+    margin: 0;
+  }
+
+  .testimonial-card:first-child {
+    margin-bottom: 4rem;
+  }
+
+  .testimonial-card:nth-child(2) {
+    margin: 2rem 0;
+  }
+
+  .testimonial-card:nth-child(3) {
+    margin-top: 4rem;
+  }
 }
